@@ -1,0 +1,7 @@
+name: WaterRemover
+main: com.danielhmoore.WaterRemover.WaterRemover
+version: 0.1
+commands:
+  WR:
+   description: Remover a Torch
+   usage: /WR
