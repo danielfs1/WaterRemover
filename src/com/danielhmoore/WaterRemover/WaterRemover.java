@@ -12,12 +12,12 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class WaterRemover extends JavaPlugin {
-	private static final Logger log = Logger.getLogger("Minecraft");
+	public static final Logger log = Logger.getLogger("Minecraft");
 	private final WaterRemoverBlockListener blockListener = new WaterRemoverBlockListener(this);
     public final HashMap<Player, ArrayList<Block>> WaterRemoverUsers = new HashMap<Player, ArrayList<Block>>();
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvent(Event.Type.BLOCK_BREAK, blockListener,
+		pm.registerEvent(Event.Type.BLOCK_DAMAGE, blockListener,
 				Event.Priority.Normal, this);
 		log.info("WaterRemover STARTED");
 	}
@@ -28,7 +28,7 @@ public class WaterRemover extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		if(commandLabel.equalsIgnoreCase("WR")){
 			toggleWaterRemover((Player) sender);
-			log.info("GETTING HERE");
+			log.info("GETTINGdfsdfsa HERE");
 			return true;
 		}
 		return false;
