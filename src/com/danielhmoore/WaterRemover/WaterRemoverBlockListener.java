@@ -41,7 +41,7 @@ public class WaterRemoverBlockListener extends BlockListener {
 		
 		WaterRemover.log.info("HERE" + block.getType());
 		
-		if(block.getType() == Material.DIRT)
+		if(block.getType() == Material.DIRT || block.getType() == Material.GRASS || block.getType() == Material.STONE)
 		{
 			block.setType(Material.AIR);
 			WaterRemover.log.info("Destroyed Water");

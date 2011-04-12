@@ -6,4 +6,4 @@ Version 0.1
 --------------
 -water removing doesnt work yet
 -removing dirt does work at super high speeds
--only dirt works, not dirt with grass
+-only works with dirt, grass, and stone
