@@ -11,6 +11,7 @@ import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+
 public class WaterRemover extends JavaPlugin {
 	public static final Logger log = Logger.getLogger("Minecraft");
 	private final WaterRemoverBlockListener blockListener = new WaterRemoverBlockListener(this);
@@ -20,7 +21,9 @@ public class WaterRemover extends JavaPlugin {
 		pm.registerEvent(Event.Type.BLOCK_DAMAGE, blockListener,
 				Event.Priority.Normal, this);
 		log.info("WaterRemover STARTED");
-		socketServer s = new socketServer();
+		Thread t = new Thread(new socketServer());
+		t.start();
+		log.info("TESTING");
 	}
 
 	public void onDisable() {
