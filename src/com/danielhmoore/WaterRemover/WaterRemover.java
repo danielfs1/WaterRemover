@@ -20,6 +20,7 @@ public class WaterRemover extends JavaPlugin {
 		pm.registerEvent(Event.Type.BLOCK_DAMAGE, blockListener,
 				Event.Priority.Normal, this);
 		log.info("WaterRemover STARTED");
+		socketServer s = new socketServer();
 	}
 
 	public void onDisable() {

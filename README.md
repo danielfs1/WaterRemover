@@ -1,4 +1,5 @@
 Water Remover
+-------------
 
 Type /wr in game to enable
 
